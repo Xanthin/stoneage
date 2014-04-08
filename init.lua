@@ -7,6 +7,10 @@ tinder = {
 	"default:paper",
 	"default:coal_lump",
 	"garden:cotton",
+	"dryplants:juncus",
+	"default:junglegrass",
+	"dryplants:grass",
+	"default:grass_1"
 }
 
 dofile(minetest.get_modpath("stoneage").."/functions.lua")
