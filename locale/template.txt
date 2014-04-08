@@ -1,0 +1,7 @@
+# Template
+
+Torch = 
+Bonfire = 
+Silex = 
+Biface = 
+Fire Striker = 
