@@ -1,10 +1,18 @@
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if intllib then
+	S = intllib.Getter()
+else
+	S = function(s) return s end
+end
+
 minetest.register_craftitem("stoneage:silex", {
-	description = "Silex",
+	description = S("Silex"),
 	inventory_image = "stoneage_silex.png",
 })
 
 minetest.register_tool("stoneage:biface", {
-	description = "Biface",
+	description = S("Biface"),
 	inventory_image = "stoneage_biface.png",
 	tool_capabilities = {
 		max_drop_level=0,
@@ -19,7 +27,7 @@ minetest.register_tool("stoneage:biface", {
 })
 
 minetest.register_tool("stoneage:firestriker_stone", {
-	description = "Fire Striker",
+	description = S("Fire Striker"),
 	inventory_image = "stoneage_firestriker_stone.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
@@ -30,7 +38,7 @@ minetest.register_tool("stoneage:firestriker_stone", {
 })
 
 minetest.register_tool("stoneage:firestriker_steel", {
-	description = "Fire Striker",
+	description = S("Fire Striker"),
 	inventory_image = "stoneage_firestriker_steel.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
