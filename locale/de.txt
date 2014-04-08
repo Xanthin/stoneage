@@ -1,0 +1,8 @@
+# Translation by Xanthin
+
+###nodes.lua###
+Torch = Fackel
+Bonfire = Lagerfeuer
+Silex = Feuerstein
+Biface = Faustkeil
+Fire Striker = Feuerstahl
