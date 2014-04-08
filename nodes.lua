@@ -1,5 +1,13 @@
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if intllib then
+	S = intllib.Getter()
+else
+	S = function(s) return s end
+end
+
 minetest.register_node("stoneage:torch_unlit", {
-	description = "Torch",
+	description = S("Torch"),
 	drawtype = "torchlike",
 	tiles = {"stoneage_torch_unlit_on_floor.png", "stoneage_torch_unlit_on_ceiling.png", "stoneage_torch_unlit_on_wall.png"},
 	inventory_image = "stoneage_torch_unlit_on_floor.png",
@@ -47,7 +55,7 @@ minetest.register_node("stoneage:torch_unlit", {
 })
 
 minetest.register_node("stoneage:bonfire_unlit", {
-	description = "Bonfire",
+	description = S("Bonfire"),
 	drawtype = "plantlike",
 	visual_scale = 1.0,
 	tiles = {"stoneage_bonfire_unlit.png"},
@@ -65,7 +73,7 @@ minetest.register_node("stoneage:bonfire_unlit", {
 })
 
 minetest.register_node("stoneage:bonfire", {
-	description = "Bonfire",
+	description = S("Bonfire"),
 	drawtype = "plantlike",
 	visual_scale = 1.0,
 	tiles = {
@@ -96,7 +104,7 @@ minetest.register_node("stoneage:bonfire", {
 --
 
 minetest.register_node("stoneage:grass_with_silex", {
-	description = "Silex",
+	description = S("Silex"),
 	tiles = {"default_grass.png^stoneage_silex_ore.png", "default_dirt.png^stoneage_silex_ore.png", "default_dirt.png^default_grass_side.png^stoneage_silex_ore.png"},
 	is_ground_content = true,
 	groups = {crumbly=3,soil=1},
@@ -107,7 +115,7 @@ minetest.register_node("stoneage:grass_with_silex", {
 })
 
 minetest.register_node("stoneage:dirt_with_silex", {
-	description = "Silex",
+	description = S("Silex"),
 	tiles = {"default_dirt.png^stoneage_silex_ore.png"},
 	is_ground_content = true,
 	groups = {crumbly=3,soil=1},
@@ -118,7 +126,7 @@ minetest.register_node("stoneage:dirt_with_silex", {
 })
 
 minetest.register_node("stoneage:sand_with_silex", {
-	description = "Silex",
+	description = S("Silex"),
 	tiles = {"default_sand.png^stoneage_silex_ore.png"},
 	is_ground_content = true,
 	groups = {crumbly=3, falling_node=1},
